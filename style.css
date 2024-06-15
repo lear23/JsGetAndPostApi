@@ -1,0 +1,95 @@
+
+
+.container-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+@media (max-width: 1400px) {
+    .container-cards {
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .cardCourses .cardImage {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 997px) {
+    .container-cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .cardCourses .cardImage {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.cardCourses {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    position: relative;
+    border: 1px solid #cdcbcb;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    /* z-index: 0;*/
+}
+    .cardCourses:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    }
+
+    .cardCourses .cardImage {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+.courseIcon {
+    position: absolute;
+    border:none;
+    background-color:transparent;
+    right: 20px;
+    top: 40px;
+}
+
+.bestSeller {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+}
+
+.cardText {
+    padding: 20px;
+}
+.cardText h5{
+    color: #090909;
+    text-decoration: underline;
+}
+
+.watch {
+    display: flex;
+    gap: 40px;
+}
+
